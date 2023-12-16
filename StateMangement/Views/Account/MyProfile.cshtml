@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Http;
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor httpContextAccessor
+
+@{
+    ViewData["Title"] = "MyProfile";
+}
+
+<h1>MyProfile</h1>
+
+<h2>Welcome @ViewBag.currentSession</h2>
+
+
+<h3>Hiiiiiiiiiiii @httpContextAccessor.HttpContext.Session.GetString("user")</h3>
